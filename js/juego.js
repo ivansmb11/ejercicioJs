@@ -12,8 +12,8 @@ const jugarTurno = () => {
 	if (vida <= 0) {
 		muerte();
 	} else {
-		// const accion = Math.floor(Math.random() * 4) + 1;
-		const accion = 1;
+		const accion = Math.floor(Math.random() * 4) + 1;
+		// const accion = 1;
 		console.log(accion);
 		switch (accion) {
 			case 1:
