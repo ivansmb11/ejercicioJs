@@ -3,20 +3,14 @@
 <head>
   <title> Plantilla</title>
   <script src='js/juego.js'></script>
+  <script src='js/keypress.js'></script>
 </head>
 
 <body onload='inicializa();'>
-  <button id="boton1" onclick='comprar("Pocion");'> Pocion </button>
-  <button id="boton2" onclick='comprar("Magia");'> Magia </button>
-  <button id="boton3" onclick='comprar("Espada");''> Espada </button>
-  <button id="boton4" onclick='comprar("Arco");'> Arco </button>
-  <button id="boton5" onclick='comprar("Flecha");'> Flecha </button>
-  <br>
-  <br>
-  <button id="boton6" onclick='crearEnemigos(6);'> Crea enemigos </button>
-  <br>
-  <br>
-  <button id="boton7" onclick='ciclo();'> Ciclo </button>
+    <canvas id='canvas' width='500' height='300' style='border:2px solid #000000;'>
+    </canvas> 
+    <button id="boton1" onclick="ataqueEnemigo();"> Ataca </button>
+    <button id="boton2" onclick="bebePocion();"> Pocion </button>
 </body>
 
 </html>
