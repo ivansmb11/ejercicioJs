@@ -3,27 +3,36 @@ const inicializa = () => {
 	console.log("Cargado");
 }
 
-let configTeclado = { prevent_repeat : true };
-let eventoTeclado = new window.keypress.Listener(this,configTeclado);
+var configTeclado = { prevent_repeat: true };
+var eventoTeclado = new window.keypress.Listener(this, configTeclado);
+var miCanvas;
 
-let miCanvas = document.getElementById('canvas');
-miCanvas.addEventListener('mousedown', clicRaton, true);
-miCanvas.addEventListener('mousemove', posicionRaton, true);
-
-const posicionRaton = (e) => {
-	console.log("X: " + e.pageX + " \nY: " + e.pageY);
+function inicializar() {
+    miCanvas = document.getElementById('canvas');
+    miCanvas.addEventListener('mousedown', clicRaton, false);
+    miCanvas.addEventListener('mousemove', posicionRaton, false);
 }
 
-const clicRaton = (e) => {
-	console.log("Has pulsado el ratón.");
+function posicionRaton(e) {
+    console.log("Posición X: " + e.pageX + ", Posición Y: " + e.pageY);
 }
 
-eventoTeclado.simple_combo('a', () => {
-	console.log("Has pulsado la tecla A");
-});
+function clicRaton(e) {
+    console.log("Pulsado ratón");
+}
 
-eventoTeclado.simple_combo('b', () => {
-	console.log("Has pulsado la tecla B");
-});
+function pulsaA() {
+    console.log("Has pulsado A");
+}
 
+function pulsaAB() {
+    console.log("Has pulsado a y b a la vez");
+}
 
+function ataqueEspecial() {
+    console.log("Ataque Especial");
+}
+
+eventoTeclado.simple_combo('a', pulsaA);
+eventoTeclado.simple_combo('a b', pulsaAB);
+eventoTeclado.simple_combo('up down a b', ataqueEspecial);
