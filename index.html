@@ -6,13 +6,17 @@
 </head>
 
 <body onload='inicializa();'>
-  <button onclick="jugarTurno()" id="boton1">Jugar Turno</button>
-  <br><br>
-  
-  <button onclick="usarItem('Pocion')" id="boton2">Poción</button>
-  <button onclick="usarItem('Cola de Fénix')" id="boton3">Cola de Fénix</button>
-  <button onclick="usarItem('Pocion Quemadura')" id="boton4">Poción de Quemaduras</button>
-  <button onclick="usarItem('Pocion Envenenamiento')" id="boton5">Poción de Veneno</button>
+  <button id="boton1" onclick='comprar("Pocion");'> Pocion </button>
+  <button id="boton2" onclick='comprar("Magia");'> Magia </button>
+  <button id="boton3" onclick='comprar("Espada");''> Espada </button>
+  <button id="boton4" onclick='comprar("Arco");'> Arco </button>
+  <button id="boton5" onclick='comprar("Flecha");'> Flecha </button>
+  <br>
+  <br>
+  <button id="boton6" onclick='crearEnemigos(6);'> Crea enemigos </button>
+  <br>
+  <br>
+  <button id="boton7" onclick='ciclo();'> Ciclo </button>
 </body>
 
 </html>
