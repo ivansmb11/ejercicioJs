@@ -65,18 +65,21 @@ var antorcha = function(x,y){
 
   }
 
-  this.dibuja = function () {
-    if (this.contador < this.retraso) {
+
+  this.dibuja = function(){
+
+    if(this.contador < this.retraso){
       this.contador++;
-    } else {
+    }
+    else{
       this.contador = 0;
       this.cambiaFotograma();
     }
+
     ctx.drawImage(tileMap,this.fotograma*32,64,32,32,anchoF*x,altoF*y,anchoF,altoF);
   }
+
 }
-
-
 
 
 
