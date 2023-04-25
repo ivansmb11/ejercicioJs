@@ -1,14 +1,17 @@
-</html>
+<html>
 
 <head>
-  <title> Plantilla</title>
-  <script src='js/juego.js'></script>
+    <title>Sesion arrays</title>
+    <script src="js/juego.js"></script>
 </head>
 
 <body onload='inicializa();'>
-  <button onclick="ataqueEnemigo(10, 'fuego')">Ataque 1</button>
-  <button onclick="bebePocion(20)">Pocion</button>
-  <button onclick="accionPrompt()">Acción</button>
+    <button onclick='compra("espada");'>Espada</button>
+    <button onclick='compra("pocion");'>Pocion</button>
+    <button onclick='vender();'>Vender</button>
+    <button onclick='muestraInventario();'>Inventario</button>
+    <canvas id='canvas' width='500' height='300' style='border:2px solid #000000;'>
+    </canvas>
 </body>
 
 </html>
